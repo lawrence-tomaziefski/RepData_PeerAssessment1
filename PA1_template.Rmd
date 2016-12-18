@@ -166,6 +166,13 @@ daily_activity_line = ggplot(daily_activity, aes(x= interval, y = steps_interval
 daily_activity_line
 ```
 
+######The five minute interval that contains the most steps:
+
+```{r daily3, cache = TRUE, echo = FALSE}
+max_steps = daily_activity %>%
+        filter(steps_interval == max(steps_interval))
+max_steps
+```
 #####Imputing missing values.
 ######The number of missing values or NAs can be found by simply taking a summary of "steps" of our data frame "activity_data".
 
